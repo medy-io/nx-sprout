@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "AngularComponent",
+  "title": "Create an Angular component",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Component name or path",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "project": {
+      "type": "string",
+      "description": "Owning Nx project",
+      "x-dropdown": "projects",
+      "x-priority": "important"
+    },
+    "style": {
+      "type": "string",
+      "description": "Stylesheet format",
+      "enum": ["css", "scss", "less", "none"],
+      "default": "scss"
+    },
+    "standalone": {
+      "type": "boolean",
+      "description": "Create a standalone component",
+      "default": true
+    },
+    "changeDetection": {
+      "type": "string",
+      "description": "Change detection strategy",
+      "enum": ["Default", "OnPush"],
+      "default": "Default"
+    },
+    "skipTests": {
+      "type": "boolean",
+      "description": "Skip the unit test file",
+      "default": false
+    },
+    "legacy": {
+      "type": "boolean",
+      "x-deprecated": "Legacy component output is deprecated."
+    },
+    "internalOption": {
+      "type": "string",
+      "x-priority": "internal"
+    }
+  },
+  "required": ["name", "project"],
+  "additionalProperties": false
+}

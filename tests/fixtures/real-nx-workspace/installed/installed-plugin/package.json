@@ -1,0 +1,7 @@
+{
+  "name": "@fixture/installed-plugin",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.cjs",
+  "generators": "./generators.json"
+}

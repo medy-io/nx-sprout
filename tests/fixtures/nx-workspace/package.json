@@ -1,0 +1,9 @@
+{
+  "name": "fixture-workspace",
+  "private": true,
+  "workspaces": ["plugins/*"],
+  "devDependencies": {
+    "@nx/angular": "workspace:*",
+    "nx": "23.2.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/nx",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"]
+  },
+  "generators": {
+    "@nx/angular:component": {
+      "style": "scss",
+      "standalone": true
+    }
+  }
+}

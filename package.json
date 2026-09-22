@@ -1,0 +1,32 @@
+{
+  "name": "nx-sprout",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A schema-driven terminal UI for Nx generators.",
+  "type": "module",
+  "bin": {
+    "nx-sprout": "./src/cli.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "demo": "bun run src/cli.ts --workspace tests/fixtures/nx-workspace --nx-bin tools/fake-nx.mjs",
+    "test": "bun test",
+    "test:integration:nx": "bun test ./tests/real-nx.integration.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck && bun test",
+    "build": "bun build ./src/cli.ts --compile --minify --outfile ./dist/nx-sprout"
+  },
+  "dependencies": {
+    "@opentui/core": "0.5.11",
+    "ajv": "8.20.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.2",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "bun": ">=1.4.0",
+    "node": ">=22.12.0"
+  },
+  "packageManager": "bun@1.4.2"
+}

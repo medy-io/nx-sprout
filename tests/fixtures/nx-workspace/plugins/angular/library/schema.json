@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "AngularLibrary",
+  "title": "Create an Angular library",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "directory": {
+      "type": "string",
+      "description": "Directory relative to the workspace root"
+    },
+    "buildable": {
+      "type": "boolean",
+      "default": false
+    },
+    "tags": {
+      "type": "array",
+      "description": "Project tags",
+      "items": {
+        "type": "string"
+      },
+      "x-prompt": {
+        "type": "list",
+        "message": "Choose project tags",
+        "multiselect": true,
+        "items": [
+          {
+            "label": "UI",
+            "value": "ui"
+          },
+          {
+            "label": "Shared",
+            "value": "shared"
+          },
+          {
+            "label": "Feature",
+            "value": "feature"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false
+}

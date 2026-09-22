@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "write-file": {
+      "factory": "./write-file.cjs",
+      "schema": "./write-file.schema.json",
+      "description": "Write a fixture file through an installed Nx plugin"
+    }
+  }
+}

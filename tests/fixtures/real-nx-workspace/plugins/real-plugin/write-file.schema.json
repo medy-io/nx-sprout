@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "NxSproutRealNxWriteFile",
+  "title": "Write a fixture file",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What should the fixture file be called?"
+    },
+    "project": {
+      "type": "string",
+      "x-dropdown": "projects"
+    }
+  },
+  "required": ["name", "project"],
+  "additionalProperties": false
+}

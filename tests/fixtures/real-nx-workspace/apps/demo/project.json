@@ -1,0 +1,7 @@
+{
+  "name": "demo-app",
+  "projectType": "application",
+  "root": "apps/demo",
+  "sourceRoot": "apps/demo/src",
+  "targets": {}
+}

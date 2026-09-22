@@ -1,0 +1,22 @@
+{
+  "generators": {
+    "component": {
+      "aliases": ["c"],
+      "description": "Create an Angular component.",
+      "schema": "./component/schema.json"
+    },
+    "library": {
+      "aliases": ["lib"],
+      "description": "Create an Angular library.",
+      "schema": "./library/schema.json"
+    },
+    "broken": {
+      "description": "Broken generator used to prove discovery isolation.",
+      "schema": "./missing/schema.json"
+    },
+    "internal-helper": {
+      "hidden": true,
+      "schema": "./component/schema.json"
+    }
+  }
+}

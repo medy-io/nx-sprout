@@ -1,0 +1,8 @@
+{
+  "name": "nx-sprout-real-nx-fixture",
+  "private": true,
+  "workspaces": ["plugins/*"],
+  "dependencies": {
+    "@fixture/installed-plugin": "file:installed/installed-plugin"
+  }
+}
